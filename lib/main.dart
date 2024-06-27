@@ -95,13 +95,72 @@ class HomePAge extends StatelessWidget {
                   value: 150, //? initial value
                   min: 0,
                   max: 200,
-                 onChanged: (value){
-
-                 })
+                 onChanged: (value){}),
               ],
             ),
+          ),
 
-          )
+          Row(
+            children: [
+
+            Expanded(child: Container(
+              height: 200,
+              margin: const EdgeInsets.all(16),
+              decoration: BoxDecoration(color: Colors.blue,
+              borderRadius: BorderRadius.circular(16)),
+              child: Column(children: [
+                const Text('hight'),
+                const Text('150'),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                  Container(
+                    decoration: BoxDecoration(color: Colors.blueGrey,
+                    borderRadius: BorderRadius.circular(8)),
+                    child: IconButton(onPressed: (){}, icon: const Icon(Icons.remove))),
+                    Container(
+                    decoration: BoxDecoration(color: Colors.blueGrey,
+                    borderRadius: BorderRadius.circular(8)),
+                    child: IconButton(onPressed: (){}, icon: const Icon(Icons.add)))
+                ],)
+              ],),
+            ),
+            ),
+
+            Expanded(child: Container(
+              margin: const EdgeInsets.all(16),
+              height: 200,
+              decoration:  BoxDecoration(color: Colors.blue,
+              borderRadius: BorderRadius.circular(16)),
+              child: Column(children: [
+                const Text('hight'),
+                const Text('150'),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                  Container(
+                    decoration: BoxDecoration(color: Colors.blueGrey,
+                    borderRadius: BorderRadius.circular(8)),
+                    child: IconButton(onPressed: (){}, icon: const Icon(Icons.remove))),
+                    Container(
+                    decoration: BoxDecoration(color: Colors.blueGrey,
+                    borderRadius: BorderRadius.circular(8)),
+                    child: IconButton(onPressed: (){}, icon: const Icon(Icons.add)))
+                ],)
+              ],),
+            ))
+          ],),
+
+          Row(children: [
+            Expanded(child: ElevatedButton(onPressed: (){},
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blue, //? color of button
+              foregroundColor: Colors.black //? color of child and color of effect when press
+            ),
+             child: Text('result',style: TextStyle(color: Colors.white),)))
+          ],)
+
+
         ],
       ),
     );
