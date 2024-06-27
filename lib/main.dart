@@ -41,7 +41,7 @@ class HomePAge extends StatelessWidget {
             Expanded(
               child: Container(
                 margin: const EdgeInsets.all(16),
-              height: MediaQuery.of(context).size.height * .22,
+              height: MediaQuery.sizeOf(context).height * .22,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
                 color: Colors.blue
@@ -60,7 +60,7 @@ class HomePAge extends StatelessWidget {
           Expanded(
             child:  Container(
               margin: const EdgeInsets.all(16),
-              height: MediaQuery.of(context).size.height * .22, //? make it responsive
+              height: MediaQuery.sizeOf(context).height * .22, //? make it responsive
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
                 color: Colors.blue
@@ -77,7 +77,7 @@ class HomePAge extends StatelessWidget {
           ],),
 
           Container(
-            height: MediaQuery.of(context).size.height *.22,
+            height: MediaQuery.sizeOf(context).height *.22,
             margin: const EdgeInsets.symmetric(horizontal: 16),
             decoration: BoxDecoration(
               color: Colors.blue,
@@ -155,9 +155,9 @@ class HomePAge extends StatelessWidget {
             Expanded(child: ElevatedButton(onPressed: (){},
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.blue, //? color of button
-              foregroundColor: Colors.black //? color of child and color of effect when press
+              foregroundColor: Colors.white //? color of child and color of effect when press
             ),
-             child: Text('result',style: TextStyle(color: Colors.white),)))
+             child: const Text('result')))
           ],)
 
 
